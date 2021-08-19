@@ -16,9 +16,16 @@ const net = require('net');
   });
 // interpret incoming data as text
 conn.setEncoding('utf8');
-
-return conn;
+const connect = function () {
+  console.log('Received: ' + data);
 }
+
+
+conn.on('connect', (data) => {
+  console.log("Successfully connected to game server");
+   });
+return conn;
+ }
 
 process.stdout.write('\x07');
 
