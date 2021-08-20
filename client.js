@@ -24,8 +24,35 @@ const connect = function () {
 conn.on('connect', (data) => {
   console.log("Successfully connected to game server");
    });
+   //conn.write('Move: up');
+   //for (let i = 1; i <= 10 ; i++) { // moveup with timeout delay
+     // setTimeout(() => {
+       // conn.write('Move: down');
+      //}, 50 * i)
+    //};
+    //conn.write('Move: down');
+    //for (let i = 1; i <= 10 ; i++) { //move up with setInterval
+      //setInterval(() => {
+        //conn.write('Move: up');
+      //}, 50 )
+    //};
+
+    //conn.write('Move: left');
+    //for (let i = 1; i <= 10 ; i++) { //move up with setInterval
+      //setInterval(() => {
+        //conn.write('Move: right');
+      //}, 50 )
+    //};
+    //conn.write('Move: right');
+    //for (let i = 1; i <= 10 ; i++) { //move up with setInterval
+      //setInterval(() => {
+        //conn.write('Move: left');
+      //}, 50 )
+    //};
 return conn;
- }
+
+
+}
 
 process.stdout.write('\x07');
 
