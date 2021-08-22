@@ -1,8 +1,11 @@
-let connection;
- //const setupInput = function() {
-  const setupInput = function(conn) {
-    connection = conn;
- const stdin = process.stdin;
+let connection;// // stores the active TCP connectiong object
+/**
+ * Setup User Interface
+ * Specifically, so that we can handle user input via stdin
+ */
+const setupInput = function(conn) {
+  connection = conn;
+  const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
   stdin.resume();
@@ -11,7 +14,7 @@ let connection;
   });
   return stdin;
 };
-setupInput(); // calling function
+//setupInput(); // calling function
 const handleUserInput = (key) => { // once called by key, execute this block
   if (key === '\u0003') { // \u0003 maps to ctrl+c input
     console.log('exiting now...');
